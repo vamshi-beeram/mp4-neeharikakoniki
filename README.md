@@ -1,15 +1,10 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=12849184&assignment_repo_type=AssignmentRepo)
+
 # CS 442 MP4: Battleships
 
 ## 1. Overview
-
-For this machine problem, your task is to implement an application that interfaces with an existing RESTful service to allow users to register, log in, and play games of [Battleships](https://en.wikipedia.org/wiki/Battleship_(game)) against both human and computer opponents.
-
-The primary objective of this MP is to provide you with an opportunity to integrate a prototypical RESTful API into a Flutter application. To do this, you will need to study the provided REST API documentation and use asynchronous operations provided by the `http` package to communicate with the API.
+ [Battleships](https://en.wikipedia.org/wiki/Battleship_(game)) 
 
 ## 2. Specifications
-
-You can view a demo of a running application that fulfills the requirements of this MP at <https://youtu.be/0oMGXxXpp04?si=ZaUBT2EZMU6Zrxif>.
 
 Below, we provide a feature overview followed by detailed behavioral specifications and implementation-level requirements that your work should conform to. In the next section we provide detailed documentation for the RESTful API.
 
@@ -189,37 +184,5 @@ All successful operations will result in an HTTP status code of `200`.
 - `DELETE base-URL/games/<game_id>`: Cancels/Forfeits the game with the integer id `<game_id>`. Note that only games which are currently in the matchmaking or active states can be canceled/forfeited. The server will respond with a JSON object containing the following field:
 
   - `message`: a message indicating that the game was successfully canceled or forfeited.
-
-## 4. Testing
-
-We will be testing your application by building and running it as either a native macOS, Android, or iOS app. Your app should run without errors or warnings, and should behave as specified above.
-
-## 5. Grading
-
-This machine problem is worth 70 points. Your grade will be based on the following criteria:
-
-- 10 points: Users can register and log in.
-
-- 5 points: Session tokens are stored locally (between application restarts), and logging out expunges the token. If the token expires, the user is required to log in again.
-
-- 10 points: The game list page displays the list of games (active/matchmaking and completed separately) with all the required information correctly. The game list page can be refreshed manually.
-
-- 10 points: Starting a game displays a functional game board for ship placement. When 5 ships are placed, the game is started and the ships are submitted to the server.
-
-- 5 points: The game board is appropriately responsive.
-
-- 10 points: It is possible to start games with human opponents, and all supported types of AI opponents.
-
-- 10 points: The gameplay screen displays the game board and allows the user to play the game if it is their turn. The game board displays all the required information correctly (ships, wrecks, missed shots, sunk ships).
-
-- 5 points: The gameplay screen displays the appropriate information after a shot is played (invalid shot, miss, sunk ship, won game).
-
-- 5 points: The gameplay screen refreshes immediately after the user plays a shot against an AI opponent, and allows the user to play again if possible.
-
-If your code does not compile, you will receive a zero for the assignment. If your code compiles but does not meet the requirements, you will receive partial credit based on the extent to which it does.
-
-## 6. Submission
-
-To submit your machine problem, commit and push your code to the "main" branch in your private GitHub repository shared with us. You can make as many commits and pushes as needed; we will assess the most recent version of your code pushed before the deadline.
 
 If you plan to use late submission days, remember to fill out and submit the late day form (found on the course website) before the deadline.
